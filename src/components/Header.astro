@@ -1,0 +1,84 @@
+---
+try {
+  const me = await fetch("/.auth/me");
+  const user = await me.json();
+} catch (e) {
+  console.error(e);
+}
+---
+
+<header class="has-background-primary">
+  <div class="container max-desktop">
+    <nav
+      class="navbar is-primary is-size-6"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <!-- Logo on the left -->
+        <a
+          class="navbar-item has-text-weight-bold is-size-4"
+          href="https://bulma.io"
+        >
+          #noahBRAVE5K
+        </a>
+        <!-- Burger icon for mobile view -->
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <!-- Buttons and dropdowns in the middle -->
+        <div class="navbar-start">
+          <a class="navbar-item">About</a>
+          <a class="navbar-item">Choose Your Event</a>
+          <!-- Dropdown menu -->
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">What's Happening</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">About</a>
+              <a class="navbar-item">Jobs</a>
+              <a class="navbar-item">Contact</a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">Report an issue</a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Donate</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">About</a>
+              <a class="navbar-item">Jobs</a>
+              <a class="navbar-item">Contact</a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">Report an issue</a>
+            </div>
+          </div>
+          <a class="navbar-item">Become a Sponsor</a>
+        </div>
+        <!-- User icon on the right -->
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Login</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="/.auth/login/apple">Apple</a>
+                <a class="navbar-item" href="/.auth/login/google">Google</a>
+                <a class="navbar-item" href="/.auth/login/facebook">Facebook</a>
+                <a class="navbar-item" href="/.auth/login/microsoft"
+                  >Microsoft</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
